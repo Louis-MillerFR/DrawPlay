@@ -22,6 +22,9 @@ public class Cat {
 	// cat expression
 	private static final int EXPRESSION_WIDTH = HEAD_DIMENSION / 10;
 	private static final int EXPRESSION_HEIGHT = HEAD_DIMENSION / 8;
+	// cat leg
+	private static final int LEG_HEIGHT = HEAD_DIMENSION/3;
+	private static final int LEG_WIDTH = 16;
 	// draw will render the Cat on the Graphics object
 	public void draw(Graphics g, int catX, int catY, int thiccc)
 	{
@@ -52,9 +55,15 @@ public class Cat {
 		g2.fillRect(catX, catY-EYE_HEIGHT, HEAD_DIMENSION, HEAD_DIMENSION/3);
 		g2.setColor(Color.blue);
 		g2.fillRect(catX+HEAD_DIMENSION/4, catY-HEAD_DIMENSION, HEAD_DIMENSION/2, HEAD_DIMENSION);
+		// Draw legs
+		g2.setColor(Color.black);
+		g2.fillOval(catX + 20, catY + 70, LEG_WIDTH, LEG_HEIGHT);
+		g2.fillOval(catX + 45, catY + 85, LEG_WIDTH, LEG_HEIGHT);
+		g2.fillOval(catX + 150, catY + 75, LEG_WIDTH, LEG_HEIGHT);
+		g2.fillOval(catX + 165, catY + 65, LEG_WIDTH, LEG_HEIGHT);
 		//draw text
 		g2.setColor(Color.red);
 		g2.setFont(new Font("Comic Sans MS", Font.PLAIN, 80));
-		g2.drawString("Meow?", catX, catY+HEAD_DIMENSION+10);	
+		g2.drawString("Meow?", catX, catY+HEAD_DIMENSION+50);	
 	}
 }
