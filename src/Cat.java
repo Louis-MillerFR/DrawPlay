@@ -53,6 +53,7 @@ public class Cat {
 		g2.setColor(Color.blue);
 		g2.fillRect(catX+HEAD_DIMENSION/4, catY-HEAD_DIMENSION, HEAD_DIMENSION/2, HEAD_DIMENSION);
 		//draw text
+		g2.setColor(Color.red);
 		g2.setFont(new Font("Comic Sans MS", Font.PLAIN, 80));
 		g2.drawString("Meow?", catX, catY+HEAD_DIMENSION+10);	
 	}
